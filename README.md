@@ -27,7 +27,9 @@
                libboost-python-dev libboost-filesystem-dev zlib1g-dev 
        $ make 
        $ sudo make install </pre>
+  ( Note:- If code shows some error then remove "\" it from the code and keep it continue ) <br>
       <img width="575" alt="yosys" src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0">
+  
       </p>
    <h2>Magic</h2>
   <p>
