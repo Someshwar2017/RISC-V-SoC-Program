@@ -2,7 +2,7 @@
 <details>
 <summary> Week 0 - Tools Installation </summary>
   <br>
-  <p>  In this step we are going to install all necessory Open Source tools which we are going to use in this program. Before that, setup ubuntu in oracle virtualbox <br>
+  <p>  In this step we are going to install all necessory Open Source tools which we are going to use in this program.<br> Before that, setup ubuntu in oracle virtualbox. <br>
     <h2>Tool includes:-</h2>
   </p>
 <ol>
@@ -27,7 +27,7 @@ $ sudo apt-get install build-essential clang bison flex \
   libboost-python-dev libboost-filesystem-dev zlib1g-dev 
 $ make 
 $ sudo make install </pre>
-  ( Note:- If code shows some error then remove "\" it from the code and keep it continue ) <br> <br>
+  ( Note:- If code shows some error then remove "\" it from the code and keep it continue. ) <br> <br>
   <p align="center">
   <img src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0" alt="yosys" width="575">
 </p>
@@ -65,7 +65,7 @@ https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee
 /etc/apt/sources.list.d/docker.list > /dev/null  </pre>
       <pre># After reboot
   docker run hello-world </pre><br>
-         (<b>Note :-</b> You should install all the dependencies before installing OpenLANE)      
+         (<b>Note :-</b> You should install all the dependencies before installing OpenLANE.)      
   </p>
   <h2></h2>
   <h2>OpenLANE</h2>
@@ -116,7 +116,7 @@ sudo apt-get install iverilog     </pre>
 sudo apt-get install iverilog    </pre>
 <h2></h2>
   <h2>ngspice</h2>
-  <p>After downloading the tarball from https://sourceforge.net/projects/ngspice/files/ to a local
+  <p>After downloading the tar file from https://sourceforge.net/projects/ngspice/files/ to a local
 directory, unpack it using:</p>
     <pre>$ tar -zxvf ngspice-37.tar.gz
 $ cd ngspice-37
@@ -145,7 +145,7 @@ eigen       3.4.0   3.4.0   MPL2  required
 cudd        3.0.0   3.0.0   BSD   required
 tclreadline 2.3.8   2.3.8   BSD   optional
 zLib        1.2.5   1.2.8   zlib  optional    </pre>
-CUDD is available <a href="https://github.com/davidkebo/cudd/blob/main/cudd_versions/cudd-3.0.0.tar.gz">here.</a> download and follow the following.
+CUDD is available <a href="https://github.com/davidkebo/cudd/blob/main/cudd_versions/cudd-3.0.0.tar.gz">here.</a> download and follow the following steps.
 <pre>tar xvfz cudd-3.0.0.tar.gz
 cd cudd-3.0.0
 ./configure
@@ -160,6 +160,9 @@ cmake -DCUDD_DIR=<CUDD_INSTALL_DIR> ..
 make
 </pre>
   If you find any difficulty then click <a href="https://github.com/The-OpenROAD-Project/OpenSTA?tab=readme-ov-file#building-with-cmake">here.</a><br>
-  If you have some issues while doing setup please share it with me, I would love to solve it and I can update it on my repo.
+  If you have any issues while performing setup please share it with me, I would love to solve it and I can update it on my repo.<br><br>
+  <div align="center">
+  <b><i>Thankyou for reading </i></b>
+</div>
 </details>
 
