@@ -1,13 +1,37 @@
-# RISC-V-SoC-Program
-  Week0 - Tool Installation instructions
-    In this step we are going to install all necessory software which we are going to use in our program.
-    Software includes:-
-            1. Yosys
-            2. magic
-            3. OpenLane
-            4. lverilog
-            5. ngspice
-            6. graywolf
-            7. qrouter
-            8. OpenSTA
-    
+# RISC-V SoC Program 
+<details>
+<summary> Week 0 - Tools Installation </summary>
+  <br>
+  <p>  In this step we are going to install all necessory tools which we are going to use in this program. Before that setup ubuntu in oracle virtualbox <br>
+    <h2>Tool includes:-</h2>
+  </p>
+<ol>
+  <li>Yosys</li>
+  <li>magic</li>
+  <li>OpenLane</li>
+  <li>OpenSTA</li>
+  <li>graywolf</li>
+  <li>qrouter</li>
+  <li>lverilog</li>
+  <li>ngspice</li>
+</ol>
+ <h2></h2>
+  <h2>Yosys – Yosys Open Synthesis Suite</h2>
+<p>
+ <pre> $ git clone https://github.com/YosysHQ/yosys.git 
+       $ cd yosys 
+       $ sudo apt install make # (If make is not installed please install it) 
+       $ sudo apt-get install build-essential clang bison flex \ 
+               libreadline-dev gawk tcl-dev libffi-dev git \ 
+               graphviz xdot pkg-config python3 libboost-system-dev \ 
+               libboost-python-dev libboost-filesystem-dev zlib1g-dev 
+       $ make 
+       $ sudo make install </pre>
+      <img width="575" alt="yosys" src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0">
+      </p>
+   <h2>Magic</h2>
+  <p>
+    <pre
+  </p>
+</details>
+
