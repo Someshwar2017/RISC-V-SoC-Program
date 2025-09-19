@@ -9,11 +9,13 @@
   <li>Yosys</li>
   <li>magic</li>
   <li>OpenLANE</li>
+  <li>lverilog</li>
+  <li>gtkwave</li>
+  <li>ngspice</li>
   <li>OpenSTA</li>
   <li>graywolf</li>
   <li>qrouter</li>
-  <li>lverilog</li>
-  <li>ngspice</li>
+  
 </ol>
  <h2></h2>
   <h2>Yosys – Yosys Open Synthesis Suite</h2>
@@ -54,14 +56,7 @@
 </p>
   </p>
   <h2></h2>
-  <h2>OpenLANE</h2>
-  <p>
-    <pre>
-      cd $HOME
-      git clone https://github.com/The-OpenROAD-Project/OpenLane
-      cd OpenLane
-      make
-      make test   </pre>
+  <h2>Dependencies </h2>
     <pre>
       sudo apt-get update
       sudo apt-get upgrade
@@ -76,7 +71,43 @@
       /etc/apt/sources.list.d/docker.list > /dev/null  </pre>
       <pre>
         # After reboot
-         docker run hello-world </pre>
+         docker run hello-world </pre><br>
+         (<b>Note :-</b> You should install all the dependencies before installing OpenLANE)      
   </p>
+  <h2></h2>
+  <h2>OpenLANE</h2>
+  <p>
+    <pre>
+      cd $HOME
+      git clone https://github.com/The-OpenROAD-Project/OpenLane
+      cd OpenLane
+      make
+      make test   </pre>
+      <p align="center">
+  <img src="https://github.com/user-attachments/assets/80845108-1ea8-4b45-936d-ad61391072ce" alt="yosys" width="575">
+        <img src="https://github.com/user-attachments/assets/74d89146-c9bb-41ab-804d-59136c6b1d98" alt="yosys" width="575">
+      <details>
+      <summary> OpenLane PDK Version Mismatch </summary><br>
+      <p><b> Error encountered:</b></p>
+        <p><i>While running make test in OpenLane:</i></p>
+        <pre>[ERROR]: The version of open_pdks used in building the PDK does not match the version OpenLane was tested on
+             (installed: a80ed405766c5d4f21c8bfca84552a7478fe75b2, tested: 0fe599b2afb6708d281543108caf8310912f54af)
+             This may introduce some issues. You may want to re-install the PDK by invoking `make pdk`.</pre>
+        <p> <i>Cause</i> <br>
+                The installed Sky130 PDK version did not match the version OpenLane expects.</p>
+        <p> <i>Solution</i> <br>
+          <ol>
+            <ln>Set up Python virtual environment:</ln><br>
+            <pre>python3 -m venv venv
+            source ./venv/bin/activate
+            pip install volare</pre>
+            <ln>Enable the tested PDK version:</ln>
+            <pre>./venv/bin/ciel enable --pdk-family sky130 (hashes)</pre>
+            <ln>Verify enabled PDK:</ln>
+            <pre>./venv/bin/ciel ls-enabled --pdk-family sky130</pre>
+            <ln>Run OpenLane flow:</ln>
+            <pre>make test</pre>
+          </ol>
+      </details>
 </details>
 
