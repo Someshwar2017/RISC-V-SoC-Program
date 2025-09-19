@@ -2,7 +2,7 @@
 <details>
 <summary> Week 0 - Tools Installation </summary>
   <br>
-  <p>  In this step we are going to install all necessory Open Source tools which we are going to use in this program. Before that setup ubuntu in oracle virtualbox <br>
+  <p>  In this step we are going to install all necessory Open Source tools which we are going to use in this program. Before that, setup ubuntu in oracle virtualbox <br>
     <h2>Tool includes:-</h2>
   </p>
 <ol>
@@ -13,8 +13,6 @@
   <li>gtkwave</li>
   <li>ngspice</li>
   <li>OpenSTA</li>
-  <li>graywolf</li>
-  <li>qrouter</li>
   
 </ol>
  <h2></h2>
@@ -161,6 +159,7 @@ cd build
 cmake -DCUDD_DIR=<CUDD_INSTALL_DIR> ..
 make
 </pre>
-  If you find any difficulty then click <a href="https://github.com/The-OpenROAD-Project/OpenSTA?tab=readme-ov-file#building-with-cmake">here.</a>
+  If you find any difficulty then click <a href="https://github.com/The-OpenROAD-Project/OpenSTA?tab=readme-ov-file#building-with-cmake">here.</a><br>
+  If you have some issues while doing setup please share it with me, I would love to solve it and I can update it on my repo.
 </details>
 
