@@ -1,8 +1,7 @@
-# RISC-V SoC Program 
 <details>
 <summary> Week 0 - Tools Installation </summary>
   <br>
-  <p>  In this step we are going to install all necessory Open Source tools which we are going to use in this program.<br> Before that, setup ubuntu in oracle virtualbox. <br>
+  <p>  In this step we are going to install all necessary Open Source tools which we are going to use in this program.<br> Before that, setup ubuntu in oracle virtualbox. <br>
     <h2>Tool includes:-</h2>
   </p>
 <ol>
@@ -89,15 +88,15 @@ make test   </pre>
                 The installed Sky130 PDK version did not match the version OpenLane expects.</p>
         <p> <i>Solution</i> <br>
           <ol>
-            <ln>Set up Python virtual environment:</ln><br>
+            <li>Set up Python virtual environment:</li><br>
             <pre>python3 -m venv venv
   source ./venv/bin/activate
   pip install volare</pre>
-            <ln>Enable the tested PDK version:</ln>
+            <li>Enable the tested PDK version:</li>
             <pre>./venv/bin/ciel enable --pdk-family sky130 (hashes)</pre>
-            <ln>Verify enabled PDK:</ln>
+            <li>Verify enabled PDK:</li>
             <pre>./venv/bin/ciel ls-enabled --pdk-family sky130</pre>
-            <ln>Run OpenLane flow:</ln>
+            <li>Run OpenLane flow:</li>
             <pre>make test</pre>
           </ol>
       </details>
@@ -170,7 +169,8 @@ make
   Week 1 :- Introduction to Iverilog Design and Test Bench.
 </summary>
     <br>
-<h2>Day 1 :- Introduction to verilog RTL design and Synthesis.</h2>
+    <details>
+      <summary>Day 1 :- Introduction to verilog RTL design and Synthesis.</summary>
     <p>
 <ol><h3> <li>Introduction to open-source simulator Iverilog.</li></h3><h2></h2>
   <p>A simulator is a software tool that helps verify digital designs before they are implemented in hardware. It allows us to test the functionality of the design by executing it together with a testbench. </p>
@@ -218,19 +218,27 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
     <pre>cd verilog_files</pre>
     <li>Start Yosys and read the standard cell library:</li>
     <pre>yosys <br>read_liberty -lib ( relative_path_to_liberty_file ) </pre>
-    <li>Read the Verilog design file:</li>
+    <img src="https://github.com/user-attachments/assets/ada3a288-a113-4e98-b6ad-8559391bf9b2" width="45%"  valign="top"/><br>
+   <br> <li>Read the Verilog design file:</li>
     <pre>read_verilog good_mux.v</pre>
-    <li>Synthesize the design specifying the top module and library:</li>
+    <img src="https://github.com/user-attachments/assets/b050b932-632b-40cc-952c-8ba0971fe379" width="45%"  valign="top"/>
+    <img src="https://github.com/user-attachments/assets/a38f90e2-a137-47c9-8204-129e10cd4f9b" width="45%"  valign="top"/><br>
+   <br> <li>Synthesize the design specifying the top module and library:</li>
     <pre>synth -top good_mux
 abc -liberty ( relative_path_to_liberty_file )</pre>
-  <li>Visualize the synthesized netlist:</li>
+    <img src="https://github.com/user-attachments/assets/fde73e2b-b9ef-41fd-9e66-055e6c57f772" width="45%"  valign="top"/><br>
+ <br> <li>Visualize the synthesized netlist:</li>
   <pre>show</pre>
-  <li>Export the synthesized netlist to a Verilog file:</li>
+    <img src="https://github.com/user-attachments/assets/7dee12a7-244d-4f3f-8409-fe557ec98205" width="45%"  valign="top"/>
+    <img src="https://github.com/user-attachments/assets/281ef7af-d92b-4100-8ff7-d9c9a74b33b7" width="45%"  valign="top"/><br>
+ <br>  <li>Export the synthesized netlist to a Verilog file:</li>
   <pre>write_verilog -noattr good_netlist.v</pre>
-  <li>(Optional) Open the file in a text editor for inspection:</li>
-  <pre>!gvim ( file_name )</pre>
+    <img src="https://github.com/user-attachments/assets/6ba5e296-77a8-4f44-aff5-35478954b9c0" width="45%"  valign="top"/><br>
+ <br> <li>(Optional) Open the file in a text editor for inspection:</li>
+  <pre>!gedit ( file_name )</pre>
+    <img src="https://github.com/user-attachments/assets/91e3fa4c-c62f-494c-adb1-57f3729ab162" width="45%"  valign="top"/><br>
   </ol>
-    <b>Explanation:</b>
+    <br><b>Explanation:</b>
     <ul>
       <li><code>read_liberty:</code> Loads the standard cell library for synthesis.</li>
       <li><code>read_verilog:</code> Loads the RTL design.</li>
@@ -241,4 +249,5 @@ abc -liberty ( relative_path_to_liberty_file )</pre>
   </p>
 </ol>
     </p>
+    </details>
   </details>
