@@ -16,8 +16,7 @@
 </ol>
  <hr>
   <h2>Yosys – Yosys Open Synthesis Suite</h2>
-<p>
- <pre>$ git clone https://github.com/YosysHQ/yosys.git 
+<p><pre>$ git clone https://github.com/YosysHQ/yosys.git 
 $ cd yosys 
 $ sudo apt install make # (If make is not installed please install it) 
 $ sudo apt-get install build-essential clang bison flex \ 
@@ -30,8 +29,7 @@ $ sudo make install </pre>
   <p align="center">  <img src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0" alt="yosys" width="575"></p>
   <hr>
    <h2>Magic</h2>
-  <p>
-    <pre>$ sudo apt-get install m4
+  <p><pre>$ sudo apt-get install m4
 $ sudo apt-get install tcsh
 $ sudo apt-get install csh
 $ sudo apt-get install libx11-dev
@@ -121,8 +119,8 @@ $ sudo make install  </pre>
 <hr>
   <h2>OpenSTA - Static Timing Analysis</h2>
   Reference :-  https://github.com/The-OpenROAD-Project/OpenSTA <br>
-  <p>Build by using CMake.</p>
-  Dependencies to download first.
+  <p>Build by using CMake.<br>
+  Dependencies to download first.</p>
     <pre>         Ubuntu   Macos
         22.04.2   14.5
 cmake    3.24.2    3.29.2
@@ -138,13 +136,14 @@ eigen       3.4.0   3.4.0   MPL2  required
 cudd        3.0.0   3.0.0   BSD   required
 tclreadline 2.3.8   2.3.8   BSD   optional
 zLib        1.2.5   1.2.8   zlib  optional    </pre>
-CUDD is available <a href="https://github.com/davidkebo/cudd/blob/main/cudd_versions/cudd-3.0.0.tar.gz">here.</a> download and follow the following steps.
+<p>
+CUDD is available <a href="https://github.com/davidkebo/cudd/blob/main/cudd_versions/cudd-3.0.0.tar.gz">here.</a> download and follow the following steps.</p>
 <pre>tar xvfz cudd-3.0.0.tar.gz
 cd cudd-3.0.0
 ./configure
 make</pre>
 <h2>Building with CMake</h2>
-Use the following commands to checkout the git repository and build the OpenSTA library and excutable.
+Use the following commands to checkout the git repository and build the OpenSTA library and excutable.<br>
 <pre>git clone https://github.com/parallaxsw/OpenSTA.git
 cd OpenSTA
 mkdir build
@@ -179,15 +178,15 @@ make
   <hr>
  <h3><li>Labs using Iverilog and GTKWave.</li></h3><h2></h2>
   <p>To simulate a design and view its waveforms, the following steps were performed:
-  <ol><li>Clone the workshop repository:</li>
+  <ol><li>Clone the workshop repository:</li><br>
     <pre>git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
-    <li>Compile the Verilog design using Iverilog:</li>
+    <li>Compile the Verilog design using Iverilog:</li><br>
     <pre>cd verilog files
 iverilog good_latch.v</pre>This generates an output file named <b>"a.out."</b><br>
-    <br><li>Run the simulation:</li>
+    <br><li>Run the simulation:</li><br>
     <pre>./a.out</pre>This produces the simulation result in a VCD file (e.g., tb_good_latch.vcd).<br>
-    <br><li>Open the waveform in GTKWave:</li>
+    <br><li>Open the waveform in GTKWave:</li><br>
     <pre>gtkwave tb_good_latch.vcd</pre>At this stage, the signal transitions of the design can be visualized and analyzed in GTKWave to verify its functionality.</ol>
   <br>
   <p align="center">
@@ -208,27 +207,27 @@ iverilog good_latch.v</pre>This generates an output file named <b>"a.out."</b><b
  <h3> <li>Labs using Yosys and Sky130 PDKs</li></h3><h2></h2>
   <p>To synthesize a design using Yosys and the Sky130 PDK, the following steps were performed:
   <ol>
-    <li>Navigate to the Verilog files directory:</li>
+    <li>Navigate to the Verilog files directory:</li><br>
     <pre>cd verilog_files</pre>
     <li>Start Yosys and read the standard cell library:</li>
     <pre>yosys <br>read_liberty -lib ( relative_path_to_liberty_file ) </pre>
     <p align="center"><img src="https://github.com/user-attachments/assets/ada3a288-a113-4e98-b6ad-8559391bf9b2" width="45%"  valign="top"/><br></p>
-   <br> <li>Read the Verilog design file:</li>
+    <li>Read the Verilog design file:</li><br>
     <pre>read_verilog good_mux.v</pre>
     <p><img src="https://github.com/user-attachments/assets/b050b932-632b-40cc-952c-8ba0971fe379" width="45%"  valign="top"/>
     <img src="https://github.com/user-attachments/assets/a38f90e2-a137-47c9-8204-129e10cd4f9b" width="45%"  valign="top"/><br></p>
-   <br> <li>Synthesize the design specifying the top module and library:</li>
+   <li>Synthesize the design specifying the top module and library:</li><br>
     <pre>synth -top good_mux
 abc -liberty ( relative_path_to_liberty_file )</pre>
 <p align="center"><img src="https://github.com/user-attachments/assets/fde73e2b-b9ef-41fd-9e66-055e6c57f772" width="45%"  valign="center"/><br></p>  
- <br> <li>Visualize the synthesized netlist:</li>
+ <li>Visualize the synthesized netlist:</li><br>
   <pre>show</pre>
     <p><img src="https://github.com/user-attachments/assets/7dee12a7-244d-4f3f-8409-fe557ec98205" width="45%"  valign="top"/>
     <img src="https://github.com/user-attachments/assets/281ef7af-d92b-4100-8ff7-d9c9a74b33b7" width="45%"  valign="top"/><br></p>
- <br>  <li>Export the synthesized netlist to a Verilog file:</li>
+ <br>  <li>Export the synthesized netlist to a Verilog file:</li><br>
   <pre>write_verilog -noattr good_netlist.v</pre>
     <p align="center">    <img src="https://github.com/user-attachments/assets/6ba5e296-77a8-4f44-aff5-35478954b9c0" width="45%"  valign="top"/><br></p>
- <br> <li>(Optional) Open the file in a text editor for inspection:</li>
+ <br> <li>(Optional) Open the file in a text editor for inspection:</li><br>
   <pre>!gedit ( file_name )</pre>
   <p align="center"><img src="https://github.com/user-attachments/assets/91e3fa4c-c62f-494c-adb1-57f3729ab162" width="45%"  valign="top"/><br></p> 
   </ol>
