@@ -14,7 +14,7 @@
   <li>OpenSTA</li>
   
 </ol>
- <h2></h2>
+ <hr>
   <h2>Yosys – Yosys Open Synthesis Suite</h2>
 <p>
  <pre>$ git clone https://github.com/YosysHQ/yosys.git 
@@ -27,11 +27,8 @@ $ sudo apt-get install build-essential clang bison flex \
 $ make 
 $ sudo make install </pre>
   ( Note:- If code shows some error then remove "\" it from the code and keep it continue. ) <br> <br>
-  <p align="center">
-  <img src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0" alt="yosys" width="575">
-</p>
-
-  <h2></h2>
+  <p align="center">  <img src="https://github.com/user-attachments/assets/1a0578b4-934a-47a3-82fc-036bb65a6bf0" alt="yosys" width="575"></p>
+  <hr>
    <h2>Magic</h2>
   <p>
     <pre>$ sudo apt-get install m4
@@ -47,11 +44,8 @@ cd magic
 ./configure
 make
 make install  </pre>
-    <p align="center">
-  <img src="https://github.com/user-attachments/assets/5e351991-6278-44fd-ab31-73c66cd9f34b" alt="yosys" width="575">
-</p>
-  </p>
-  <h2></h2>
+    <p align="center"> <img src="https://github.com/user-attachments/assets/5e351991-6278-44fd-ab31-73c66cd9f34b" alt="yosys" width="575"></p>  </p>
+  <hr>
   <h2>Dependencies </h2>
     <pre>sudo apt-get update
 sudo apt-get upgrade
@@ -66,7 +60,7 @@ https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee
   docker run hello-world </pre><br>
          (<b>Note :-</b> You should install all the dependencies before installing OpenLANE.)      
   </p>
-  <h2></h2>
+  <hr>
   <h2>OpenLANE</h2>
   <p>
     <pre>cd $HOME
@@ -100,20 +94,20 @@ make test   </pre>
             <pre>make test</pre>
           </ol>
       </details>
-      <h2></h2>
+      <hr>
   <h2>Iverilog</h2>
   Steps to install iverilog
   <p>
     <pre>sudo apt-get update
 sudo apt-get install iverilog     </pre>
   </p>
-  <h2></h2>
+  <hr>
   <h2>gtkwave</h2>
   Steps to install gtkwave
   <p>
     <pre>sudo apt-get update
 sudo apt-get install iverilog    </pre>
-<h2></h2>
+<hr>
   <h2>ngspice</h2>
   <p>After downloading the tar file from https://sourceforge.net/projects/ngspice/files/ to a local
 directory, unpack it using:</p>
@@ -124,7 +118,7 @@ $ cd release
 $ ../configure --with-x --with-readline=yes --disable-debug
 $ make
 $ sudo make install  </pre>
-<h2></h2>
+<hr>
   <h2>OpenSTA - Static Timing Analysis</h2>
   Reference :-  https://github.com/The-OpenROAD-Project/OpenSTA <br>
   <p>Build by using CMake.</p>
@@ -182,7 +176,7 @@ make
   <li>Compile using Iverilog.</li>
   <li>Run the simulation to generate a VCD file.</li>
   <li>Open the VCD file in GTKWave to visualize waveforms.</li></ol>
-  <h2></h2>
+  <hr>
  <h3><li>Labs using Iverilog and GTKWave.</li></h3><h2></h2>
   <p>To simulate a design and view its waveforms, the following steps were performed:
   <ol><li>Clone the workshop repository:</li>
@@ -190,7 +184,7 @@ make
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
     <li>Compile the Verilog design using Iverilog:</li>
     <pre>cd verilog files
-    iverilog good_latch.v</pre>This generates an output file named <b>"a.out."</b><br>
+iverilog good_latch.v</pre>This generates an output file named <b>"a.out."</b><br>
     <br><li>Run the simulation:</li>
     <pre>./a.out</pre>This produces the simulation result in a VCD file (e.g., tb_good_latch.vcd).<br>
     <br><li>Open the waveform in GTKWave:</li>
@@ -201,7 +195,7 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
   <img src="https://github.com/user-attachments/assets/b44e0958-5a2d-4659-8508-8e9a39685783" width="45%" />
 </p>
   </p>
-  <h2></h2>
+  <hr>
  <h3> <li>Introduction to Yosys and Logic Synthesis</li></h3><h2></h2>
   <p>Yosys is an open-source logic synthesis tool used to convert RTL (Register Transfer Level) designs into a gate-level netlist. This netlist maps the design onto standard cells from a library, preparing it for further verification and eventual hardware implementation. Verification of Synthesis <br> After synthesis, the netlist is verified to ensure functional equivalence with the original RTL:
   <ol>
@@ -210,7 +204,7 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
     <li>This VCD file is viewed in GTKWave to compare waveforms and confirm that the synthesized design behaves identically to the RTL.</li>
   </ol>
   </p>
-  <h2></h2>
+  <hr>
  <h3> <li>Labs using Yosys and Sky130 PDKs</li></h3><h2></h2>
   <p>To synthesize a design using Yosys and the Sky130 PDK, the following steps were performed:
   <ol>
@@ -218,25 +212,25 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
     <pre>cd verilog_files</pre>
     <li>Start Yosys and read the standard cell library:</li>
     <pre>yosys <br>read_liberty -lib ( relative_path_to_liberty_file ) </pre>
-    <img src="https://github.com/user-attachments/assets/ada3a288-a113-4e98-b6ad-8559391bf9b2" width="45%"  valign="top"/><br>
+    <p align="center"><img src="https://github.com/user-attachments/assets/ada3a288-a113-4e98-b6ad-8559391bf9b2" width="45%"  valign="top"/><br></p>
    <br> <li>Read the Verilog design file:</li>
     <pre>read_verilog good_mux.v</pre>
-    <img src="https://github.com/user-attachments/assets/b050b932-632b-40cc-952c-8ba0971fe379" width="45%"  valign="top"/>
-    <img src="https://github.com/user-attachments/assets/a38f90e2-a137-47c9-8204-129e10cd4f9b" width="45%"  valign="top"/><br>
+    <p><img src="https://github.com/user-attachments/assets/b050b932-632b-40cc-952c-8ba0971fe379" width="45%"  valign="top"/>
+    <img src="https://github.com/user-attachments/assets/a38f90e2-a137-47c9-8204-129e10cd4f9b" width="45%"  valign="top"/><br></p>
    <br> <li>Synthesize the design specifying the top module and library:</li>
     <pre>synth -top good_mux
 abc -liberty ( relative_path_to_liberty_file )</pre>
-    <img src="https://github.com/user-attachments/assets/fde73e2b-b9ef-41fd-9e66-055e6c57f772" width="45%"  valign="top"/><br>
+<p align="center"><img src="https://github.com/user-attachments/assets/fde73e2b-b9ef-41fd-9e66-055e6c57f772" width="45%"  valign="center"/><br></p>  
  <br> <li>Visualize the synthesized netlist:</li>
   <pre>show</pre>
-    <img src="https://github.com/user-attachments/assets/7dee12a7-244d-4f3f-8409-fe557ec98205" width="45%"  valign="top"/>
-    <img src="https://github.com/user-attachments/assets/281ef7af-d92b-4100-8ff7-d9c9a74b33b7" width="45%"  valign="top"/><br>
+    <p><img src="https://github.com/user-attachments/assets/7dee12a7-244d-4f3f-8409-fe557ec98205" width="45%"  valign="top"/>
+    <img src="https://github.com/user-attachments/assets/281ef7af-d92b-4100-8ff7-d9c9a74b33b7" width="45%"  valign="top"/><br></p>
  <br>  <li>Export the synthesized netlist to a Verilog file:</li>
   <pre>write_verilog -noattr good_netlist.v</pre>
-    <img src="https://github.com/user-attachments/assets/6ba5e296-77a8-4f44-aff5-35478954b9c0" width="45%"  valign="top"/><br>
+    <p align="center">    <img src="https://github.com/user-attachments/assets/6ba5e296-77a8-4f44-aff5-35478954b9c0" width="45%"  valign="top"/><br></p>
  <br> <li>(Optional) Open the file in a text editor for inspection:</li>
   <pre>!gedit ( file_name )</pre>
-    <img src="https://github.com/user-attachments/assets/91e3fa4c-c62f-494c-adb1-57f3729ab162" width="45%"  valign="top"/><br>
+  <p align="center"><img src="https://github.com/user-attachments/assets/91e3fa4c-c62f-494c-adb1-57f3729ab162" width="45%"  valign="top"/><br></p> 
   </ol>
     <br><b>Explanation:</b>
     <ul>
