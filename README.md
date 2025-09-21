@@ -170,7 +170,7 @@ make
   Week 1 :- Introduction to Iverilog Design and Test Bench.
 </summary>
     <br>
-h<h2>Day 1 :- Introduction to verilog RTL design and Synthesis.</h2>
+<h2>Day 1 :- Introduction to verilog RTL design and Synthesis.</h2>
     <p>
 <ol><h3> <li>Introduction to open-source simulator Iverilog.</li></h3><h2></h2>
   <p>A simulator is a software tool that helps verify digital designs before they are implemented in hardware. It allows us to test the functionality of the design by executing it together with a testbench. </p>
@@ -202,11 +202,43 @@ cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
 </p>
   </p>
   <h2></h2>
- <h3> <li>Introduction to Yosys and Logic Synthesis</li></h3>
-  <p></p>
+ <h3> <li>Introduction to Yosys and Logic Synthesis</li></h3><h2></h2>
+  <p>Yosys is an open-source logic synthesis tool used to convert RTL (Register Transfer Level) designs into a gate-level netlist. This netlist maps the design onto standard cells from a library, preparing it for further verification and eventual hardware implementation. Verification of Synthesis <br> After synthesis, the netlist is verified to ensure functional equivalence with the original RTL:
+  <ol>
+    <li>The netlist is simulated along with the same testbench used for RTL simulation.</li>
+    <li>The simulator (e.g., Iverilog) generates a VCD file capturing signal transitions.</li>
+    <li>This VCD file is viewed in GTKWave to compare waveforms and confirm that the synthesized design behaves identically to the RTL.</li>
+  </ol>
+  </p>
   <h2></h2>
- <h3> <li>Labs using Yosys and Sky130 PDKs</li></h3>
-  <p></p>
+ <h3> <li>Labs using Yosys and Sky130 PDKs</li></h3><h2></h2>
+  <p>To synthesize a design using Yosys and the Sky130 PDK, the following steps were performed:
+  <ol>
+    <li>Navigate to the Verilog files directory:</li>
+    <pre>cd verilog_files</pre>
+    <li>Start Yosys and read the standard cell library:</li>
+    <pre>yosys <br>read_liberty -lib ( relative_path_to_liberty_file ) </pre>
+    <li>Read the Verilog design file:</li>
+    <pre>read_verilog good_mux.v</pre>
+    <li>Synthesize the design specifying the top module and library:</li>
+    <pre>synth -top good_mux
+abc -liberty ( relative_path_to_liberty_file )</pre>
+  <li>Visualize the synthesized netlist:</li>
+  <pre>show</pre>
+  <li>Export the synthesized netlist to a Verilog file:</li>
+  <pre>write_verilog -noattr good_netlist.v</pre>
+  <li>(Optional) Open the file in a text editor for inspection:</li>
+  <pre>!gvim ( file_name )</pre>
+  </ol>
+    <b>Explanation:</b>
+    <ul>
+      <li><code>read_liberty:</code> Loads the standard cell library for synthesis.</li>
+      <li><code>read_verilog:</code> Loads the RTL design.</li>
+      <li><code>synth</code> + <code>abc:</code> Performs logic synthesis and maps the design to the library cells.</li>
+      <li><code>show:</code> Visualizes the netlist structure.</li>
+      <li><code>write_verilog:</code> Saves the synthesized netlist for post-synthesis simulation or further processing.</li>
+    </ul>
+  </p>
 </ol>
     </p>
   </details>
