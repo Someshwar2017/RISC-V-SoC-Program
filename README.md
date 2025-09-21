@@ -165,4 +165,48 @@ make
   <b><i>Thankyou for reading </i></b>
 </div>
 </details>
-
+  <details>
+<summary>
+  Week 1 :- Introduction to Iverilog Design and Test Bench.
+</summary>
+    <br>
+h<h2>Day 1 :- Introduction to verilog RTL design and Synthesis.</h2>
+    <p>
+<ol><h3> <li>Introduction to open-source simulator Iverilog.</li></h3><h2></h2>
+  <p>A simulator is a software tool that helps verify digital designs before they are implemented in hardware. It allows us to test the functionality of the design by executing it together with a testbench. </p>
+  In Iverilog, the inputs are:
+  <ul><li>Design file (RTL code)</li>
+    <li>Testbench file</li></ul><br>
+  Basic Simulation Flow:
+  <ol><li>Write the RTL design and testbench.</li>
+  <li>Compile using Iverilog.</li>
+  <li>Run the simulation to generate a VCD file.</li>
+  <li>Open the VCD file in GTKWave to visualize waveforms.</li></ol>
+  <h2></h2>
+ <h3><li>Labs using Iverilog and GTKWave.</li></h3><h2></h2>
+  <p>To simulate a design and view its waveforms, the following steps were performed:
+  <ol><li>Clone the workshop repository:</li>
+    <pre>git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+cd sky130RTLDesignAndSynthesisWorkshop/verilog_files</pre>
+    <li>Compile the Verilog design using Iverilog:</li>
+    <pre>cd verilog files
+    iverilog good_latch.v</pre>This generates an output file named <b>"a.out."</b><br>
+    <br><li>Run the simulation:</li>
+    <pre>./a.out</pre>This produces the simulation result in a VCD file (e.g., tb_good_latch.vcd).<br>
+    <br><li>Open the waveform in GTKWave:</li>
+    <pre>gtkwave tb_good_latch.vcd</pre>At this stage, the signal transitions of the design can be visualized and analyzed in GTKWave to verify its functionality.</ol>
+  <br>
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/b386e58c-8cc5-4927-86b4-9ff97209e914" width="45%"  valign="top"  />
+  <img src="https://github.com/user-attachments/assets/b44e0958-5a2d-4659-8508-8e9a39685783" width="45%" />
+</p>
+  </p>
+  <h2></h2>
+ <h3> <li>Introduction to Yosys and Logic Synthesis</li></h3>
+  <p></p>
+  <h2></h2>
+ <h3> <li>Labs using Yosys and Sky130 PDKs</li></h3>
+  <p></p>
+</ol>
+    </p>
+  </details>
