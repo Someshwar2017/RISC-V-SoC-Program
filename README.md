@@ -1,4 +1,3 @@
-### RISC-V SoC Program Week 0
 <details>
 <summary> Week 0 - Tools Installation </summary>
   <br>
